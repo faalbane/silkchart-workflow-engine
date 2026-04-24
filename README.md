@@ -2,6 +2,8 @@
 
 A small NestJS + React app that runs multi-step workflows, persists state after every transition, and picks up where it left off if the process dies. Built to match the interview-agent scenario in the brief: check a calendar, update a CRM, send a follow-up, and have all of that survive a crash.
 
+**Walkthrough video:** https://www.loom.com/share/06764f4ab87d40c7985b6e79ed63da07
+
 ## What's in the repo
 
 ```

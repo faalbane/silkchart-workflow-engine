@@ -10,9 +10,13 @@ import { updateCrmHandler } from './handlers/update-crm.handler';
 import { sendFollowupHandler } from './handlers/send-followup.handler';
 import { flakyHandler } from './handlers/flaky.handler';
 
+// Resolve relative to the package directory, not __dirname. With nest's dev
+// build the compiled file lives under dist/, which would otherwise put data
+// at backend/dist/data/workflows. The npm scripts always run from backend/,
+// so process.cwd() is the stable anchor.
 const DATA_DIR =
   process.env.WORKFLOW_DATA_DIR ??
-  path.resolve(__dirname, '..', '..', 'data', 'workflows');
+  path.resolve(process.cwd(), 'data', 'workflows');
 
 @Module({
   controllers: [WorkflowController],
