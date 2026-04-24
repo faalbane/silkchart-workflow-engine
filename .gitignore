@@ -1,0 +1,16 @@
+node_modules/
+dist/
+.DS_Store
+*.log
+*.tsbuildinfo
+.env
+.env.*
+!.env.example
+
+# Runtime-generated workflow state
+backend/data/workflows/*.json
+backend/data/workflows/*.tmp
+
+# Test artifacts
+coverage/
+.tmp-test/
